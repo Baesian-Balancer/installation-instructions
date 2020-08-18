@@ -61,3 +61,8 @@ if output is true GPU is being used.
 
 **Uninstall environment**: 
 `conda remove --name bb --all` verify it is removed with `conda env --list`
+
+Install Gym
+----
+1. `conda activate bb`
+2. `pip install gym`
