@@ -27,7 +27,8 @@ Anaconda install:
 2. `bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh`
 3. `source ~/.bashrc`
 4. `conda update --all`
-Anaconda uninstall:
+
+**Anaconda uninstall**:
 1. `rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum`
 2. Open the ~/.bashrc file and remove the Anaconda directory from the PATH environment variable:
 ```
@@ -57,4 +58,6 @@ import torch
 torch.cuda.is_available()
 ```
 if output is true GPU is being used.
-Uninstall environment: `conda remove --name bb --all` verify it is removed with `conda env --list`
+
+**Uninstall environment**: 
+`conda remove --name bb --all` verify it is removed with `conda env --list`
