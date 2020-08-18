@@ -47,4 +47,8 @@ Install Cuda
 1. `conda create -n bb python numpy scipy` create a conda environment
 2. `conda activate bb` to enter into environment
 3. `conda install pytorch torchvision cudatoolkit=10.2 -c pytorch` install pytorch and cuda
-4. to uninstall environment: `conda remove --name bb --all` verify it is removed with `conda env --list`
+4. ```Python
+    import torch
+    torch.cuda.is_available()
+    ```
+Uninstall environment: `conda remove --name bb --all` verify it is removed with `conda env --list`
