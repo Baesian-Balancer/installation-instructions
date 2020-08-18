@@ -32,13 +32,12 @@ Setup conda virtual enviroment with Cuda and pytorch
 1. `conda create -n bb python numpy scipy` create a conda environment
 2. `conda activate bb` to enter into environment
 3. `conda install pytorch torchvision cudatoolkit=10.2 -c pytorch` install pytorch and cuda
-4. 
+4. Check if enviroment has GPU available - if output is true GPU is being used.
 ```
 Python
 import torch
 torch.cuda.is_available()
 ```
-if output is true GPU is being used.
 
 **Uninstall environment**: 
 `conda remove --name bb --all` verify it is removed with `conda env --list`
