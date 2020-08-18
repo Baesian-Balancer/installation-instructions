@@ -23,7 +23,7 @@ Packages Install:
 =======
 Anaconda install:
 ----
-1. `wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh`
+1. `wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh`
 2. `bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh`
 3. `source ~/.bashrc`
 4. `conda update --all`
