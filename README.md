@@ -18,3 +18,28 @@ http://gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros
 1. kill all gazebo processes `killall -9 gzserver`
 2. Convert URDF -> SDF `gz sdf -p urdf_file.urdf > sdf_converted_file.sdf`
 3. Run gazebo world `gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world`
+
+### Anaconda install:
+1. `wget -P /tmp https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh`
+2. `bash /tmp/Anaconda3-2020.02-Linux-x86_64.sh`
+3. `source ~/.bashrc`
+4. `conda update --all`
+### Anaconda uninstall:
+1. `rm -rf ~/anaconda3 ~/.condarc ~/.conda ~/.continuum`
+2. Open the ~/.bashrc file and remove the Anaconda directory from the PATH environment variable:
+`# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/linuxize/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/linuxize/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/linuxize/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/linuxize/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<`
+### Install Cuda
+1. `conda create -n bb python numpy scipy` create a conda environment
