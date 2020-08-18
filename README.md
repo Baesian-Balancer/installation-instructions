@@ -1,4 +1,4 @@
-# installation-instructions
+# Installation Instructions
 
 Packages Install:
 =======
@@ -39,13 +39,15 @@ import torch
 torch.cuda.is_available()
 ```
 
-**Uninstall environment**: 
+**Uninstall conda environment**: 
+
 `conda remove --name bb --all` verify it is removed with `conda env --list`
 
 Install Gym
 ----
 1. `conda activate bb`
 2. `pip install gym`
+
 
 ROS2-Foxy stuff
 =====
@@ -56,13 +58,13 @@ http://gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros
 Useful ROS2 command
 ---
 **For python** 
-1. Create new package using (will contain empty dummy node) `ros2 pkg create --build-type ament_python --node-name my_node my_package`
-2. Create new custom interfaces using `ros2 pkg create --build-type ament_cmake my_interfaces`
+1. `ros2 pkg create --build-type ament_python --node-name my_node my_package` Create new package using (will contain empty dummy node)
+2. `ros2 pkg create --build-type ament_cmake my_interfaces` Create new custom interfaces using
 **For general**
-1. Install ros dependencies `rosdep install -i --from-path src --rosdistro foxy -y --reinstall`
-2. Publish message `ros2 topic pub --once /topic/message std_msgs/msg/String '{msg: 'string'}'`
-3. Call service `ros2 service call /topic/service /custom_interfaces/srv/my_srv '{data: data here, more_data: more data here, ...}'`
+1. `rosdep install -i --from-path src --rosdistro foxy -y --reinstall` Install ros dependencies 
+2. `ros2 topic pub --once /topic/message std_msgs/msg/String '{msg: 'string'}'` Publish message 
+3. `ros2 service call /topic/service /custom_interfaces/srv/my_srv '{data: data here, more_data: more data here, ...}'` Call service 
 **Gazebo**
-1. kill all gazebo processes `killall -9 gzserver`
-2. Convert URDF -> SDF `gz sdf -p urdf_file.urdf > sdf_converted_file.sdf`
-3. Run gazebo world `gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world`
+1. `killall -9 gzserver` kill all gazebo processes 
+2. `gz sdf -p urdf_file.urdf > sdf_converted_file.sdf` Convert URDF -> SDF 
+3. `gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world` Run gazebo world 
