@@ -41,7 +41,7 @@ torch.cuda.is_available()
 
 **Uninstall conda environment**: 
 
-`conda remove --name bb --all` verify it is removed with `conda env --list`
+`conda remove --name bb --all` verify it is removed with `conda-env list`
 
 Install Gym
 ----
