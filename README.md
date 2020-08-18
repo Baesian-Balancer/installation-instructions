@@ -46,7 +46,7 @@ fi
 unset __conda_setup
 ```
 
-Install Cuda
+Setup conda virtual enviroment with Cuda and pytorch
 ----
 1. `conda create -n bb python numpy scipy` create a conda environment
 2. `conda activate bb` to enter into environment
